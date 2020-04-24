@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar color="primary">
-      <ion-buttons slot="start">
+    <ion-buttons slot="start">
       <ion-back-button defaulthref="/tabs/episodes"></ion-back-button>
     </ion-buttons>
     <ion-title>{{ episode?.title }}</ion-title>
@@ -9,7 +9,23 @@
 <ion-content class="ion-padding">
     <ion-card>
         <ion-card-content>
-        Season: {{ episode.season }}
+        <div style="float:left">  
+        <b>Id</b>: {{ episode?.episode_id }}<br>
+        <b>Season</b>: {{ episode?.season }}<br>
+        <b>Episode number of the Season</b>: {{ episode?.episode }}<br>
+        <b>Air Date</b>: {{ episode?.air_date }}<br>
+        <b>Characters</b>: {{ episode?.characters.join(", ") }}<br>
+        <br><br>
+      </div>        
+        <ion-buttons slot="end" style="float: right;"> 
+          <ion-button (click)="unfavourite()" *ngIf="isFavourite">      
+              <ion-icon name="heart-circle" class="favourite"></ion-icon>    
+          </ion-button>    
+          <ion-button (click)="favourite()" *ngIf="!isFavourite">      
+            <ion-icon name="heart-circle-outline"  ></ion-icon>    
+          </ion-button>  
+        </ion-buttons>
         </ion-card-content>
     </ion-card>
+    
 </ion-content>

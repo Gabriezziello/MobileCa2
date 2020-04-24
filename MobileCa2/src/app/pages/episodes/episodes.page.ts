@@ -17,8 +17,8 @@ export class EpisodesPage implements OnInit {
         });
     }
     openDetails(episode) {
-        console.log(episode);
-        // let episodeId = episode.episode_id;
-        // this.router.navigateByUrl(`/tabs/episodes/${episodeId}`);
+        //console.log(episode);
+        let episodeId = episode.episode_id;
+        this.router.navigateByUrl(`/tabs/episodes/${episodeId}`);
     }
 }

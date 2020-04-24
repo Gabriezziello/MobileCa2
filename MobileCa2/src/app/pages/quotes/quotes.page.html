@@ -1,9 +1,14 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>quotes</ion-title>
+  <ion-toolbar color="primary">
+    <ion-title>Quotes</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <ion-searchbar showCancelButton="focus" placeholder="Search by author" (ionInput)="getQuotes($event)"></ion-searchbar>
+  <ion-list>
+    <ion-item button detail lines="inset" *ngFor="let quote of quotes | async" (click)="openDetails(quote)">     
+     <ion-label>{{ quote.quote }}</ion-label>      
+   </ion-item>
+</ion-list>
 </ion-content>

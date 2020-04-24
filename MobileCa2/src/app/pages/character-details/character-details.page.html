@@ -1,9 +1,32 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>character-details</ion-title>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaulthref="/tabs/characters"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ character?.name }}</ion-title>
   </ion-toolbar>
 </ion-header>
-
-<ion-content>
-
+<ion-content class="ion-padding">
+    <ion-card>
+        <ion-card-content>
+          <ion-img [src]="character?.img" style="width: 200px; float:left"></ion-img>
+        <div class="content">
+        <b>Character Id</b>: {{ character?.char_id }}<br>
+        <b>Birthday</b>: {{ character?.birthday }}<br>
+        <b>Status</b>: {{ character?.status }}<br>
+        <b>Appearence on seasons</b>: {{ character?.appearance.join(",") }}<br>
+        <b>Nickname</b>: {{ character?.nickname }}<br>
+        <b>Portrayed</b>: {{ character?.portrayed }}<br>
+        <b>Occupation</b>: {{ character?.occupation.join(",") }}<br>       
+        </div>
+        <ion-buttons slot="end" style="float: right;"> 
+          <ion-button (click)="unfavourite()" *ngIf="isFavourite">      
+              <ion-icon name="heart-circle" class="favourite"></ion-icon>    
+          </ion-button>    
+          <ion-button (click)="favourite()" *ngIf="!isFavourite">      
+            <ion-icon name="heart-circle-outline"  ></ion-icon>    
+          </ion-button>  
+        </ion-buttons>
+        </ion-card-content>
+    </ion-card>
 </ion-content>
