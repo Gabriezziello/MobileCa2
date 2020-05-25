@@ -1,1 +1,1 @@
-web: npm run build && npm start
+web: cd MobileCa2 npm run build && npm start
