@@ -1,1 +1,1 @@
-web: npm start --prefix MobileCa2
+web: npm run build --prefix MobileCa2 && npm start --prefix MobileCa2
