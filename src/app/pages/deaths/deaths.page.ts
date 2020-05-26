@@ -8,9 +8,8 @@ import { ApiService } from '../../services/api.service';
   templateUrl: './deaths.page.html',
   styleUrls: ['./deaths.page.scss'],
 })
-export class DeathsPage implements OnInit {
-  deaths: Observable<any>;
-  totalDeaths: Observable<any>;
+export class DeathsPage implements OnInit { 
+  totalDeaths: any;
   constructor(private router: Router, private api: ApiService) { }
 
   ngOnInit() {      
