@@ -1,6 +1,7 @@
 {
   "name": "MobileCa2",
   "integrations": {
+    "cordova": {},
     "capacitor": {}
   },
   "type": "angular"
