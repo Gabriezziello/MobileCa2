@@ -39,10 +39,8 @@
     "rxjs": "~6.5.1",
     "tslib": "^2.0.0",
 	"typescript": "^3.8.3",
-    "zone.js": "~0.10.3"
-  },
-  "devDependencies": {
-  "@angular/language-service": "~9.1.9",
+    "zone.js": "~0.10.3",
+	"@angular/language-service": "~9.1.9",
       "@capacitor/cli": "2.1.0",
     "@ionic/angular-toolkit": "^2.1.1", 
     "@types/jasmine": "~3.5.10",
@@ -58,7 +56,10 @@
     "karma-jasmine-html-reporter": "^1.5.4",
     "protractor": "~7.0.0",
     "ts-node": "~8.10.1",
-    "tslint": "~6.1.2"	    
+    "tslint": "~6.1.2"	  
+  },
+  "devDependencies": {
+    
   },
   "engines": {
 	"node": "12.16.1",
